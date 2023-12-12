@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(13, 139, 11, 0.5);
+  overflow: hidden;
+  margin: 0 20px;
+}
+
+.container .forms {
+  display: flex;
+  align-items: center;
+  height: 540px;
+  width: 200%;
+  transition: height 0.2s ease;
+}
+
+.container .form {
+  width: 50%;
+  padding: 30px;
+  background-color: #fff;
+  transition: margin-left 0.18s ease;
+  border-radius: 10px;
+}
+
+.container.active .login {
+  margin-left: -50%;
+  opacity: 0;
+  transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup {
+  opacity: 0;
+  transition: opacity 0.09s ease;
+  border-radius: 10px;
+}
+
+.container.active .signup {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.container.active .forms {
+  height: 700px;
+}
+
+.container .form .title {
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+  padding-left: 5px;
+  left: 8rem;
+  color: #726f6f;
+}
+.container .form .title1 {
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    padding-left: 5px;
+    left: 2rem;
+    color: #726f6f;
+}
+
+.form .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+.input-field input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 15px;
+  border: 2px solid #3a4338;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+  border-color: #206a1c;
+}
+
+.form .checkbox-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   margin-top: 20px; 
+}
+
+.checkbox-text .checkbox-content {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-content input {
+  margin: 0 8px -2px 4px;
+  accent-color: #4a863f;
+}
+
+.form .text {
+  color: #333;
+  font-size: 14px;
+}
+
+.form a.text {
+  color: #568d4d;
+  text-decoration: none;
+}
+
+.form a:hover {
+  text-decoration: underline;
+}
+
+.form .button {
+  margin-top: 35px;
+}
+
+.form .button input {
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  background-color: #4a863f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button input:hover {
+  background-color: #568d4d;
+}
+
+.form .login-signup {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Password Policies */
+#password-policies {
+  position: absolute;
+  top: 334px;
+  width: 86%;
+  padding: 10px;
+  background: #f5f5f5;
+  border: 0.5px solid gray;
+  border-radius: 0 0 5px 5px;
+  margin: auto;
+  opacity: 1;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#password-policies.active {
+  opacity: 1;
+  padding: 10px;
+  height: 180px;
+}
+
+#password-policies > div {
+  margin: 4px 2px;
+  font-weight: 500;
+}
+
+#password-policies ul {
+  list-style: none;
+}
+
+.valid {
+  color: green;
+}
+
+.invalid {
+  color: #888;
+}
+
+.hide {
+  display: none;
+}
+
+label {
+  margin: 0;
+}
+
+
+
+/* Password strength check CSS */
+.container .forms .signup form .pw-strength {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  margin-top: 3px;
+  text-align: center;
+  background: #f2f2f2;
+  display: none;
+}
+
+form .pw-display-toggle-btn,
+form .pw-display-toggle-btn-loginpass,
+form .pw-display-toggle-btn-cpass {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+form .pw-display-toggle-btn i.fa-eye,
+form .pw-display-toggle-btn-loginpass i.fa-eye,
+form .pw-display-toggle-btn-cpass i.fa-eye {
+  display: none;
+}
+
+form .pw-display-toggle-btn.active i.fa-eye,
+form .pw-display-toggle-btn-loginpass.active i.fa-eye,
+form .pw-display-toggle-btn-cpass.active i.fa-eye {
+  display: block;
+}
+
+form .pw-display-toggle-btn.active i.fa-eye-slash,
+form .pw-display-toggle-btn-loginpass.active i.fa-eye-slash,
+form .pw-display-toggle-btn-cpass.active i.fa-eye-slash {
+  display: none;
+}
+
+form .pw-strength span:nth-child(1) {
+  position: relative;
+  font-size: 13px;
+  color: #111;
+  top: -3px;
+  z-index: 2;
+  font-weight: 600;
+}
+
+form .pw-strength span:nth-child(2) {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  border-radius: 5px;
+  z-index: 1;
+  transition: all 300 ease-in-out;
+}
+
+  .form .input-field input:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .form .button input:hover {
+    background-color: #568d4d;
+    transform: scale(1.05);
+  }
+  
+  .form a.text:hover {
+    text-decoration: none;
+    color: #568d4d;
+  }

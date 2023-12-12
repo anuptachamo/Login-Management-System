@@ -1,0 +1,92 @@
+/* CSS for home.php */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+}
+body {
+    font-family: 'Poppins',sans-serif;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+h1{
+    color: white;
+    padding: 10px;
+}
+h1:hover{
+    color: #d6ddd5;
+    transform: scale(1.05);
+}
+nav {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid whitesmoke;
+    background: green;
+}
+
+section {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.collapse {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.me-2 {
+    margin-right: 10px;
+}
+
+a {
+    color: #ffffff;
+}
+a:hover{
+    color: #d6ddd5;
+
+}
+h2{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+span {
+    color: #fff;
+    font-weight: 800;
+    background-color: green;
+}
+
+
+.nav-logo{
+    height: 80px;
+    width: auto;
+    padding-right: 2rem;
+}
+#my-div{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+#my-div .nav-item{
+    margin: 0 10px;
+    font-weight: 500;
+}
+#my-div .nav-link{
+    text-decoration: none;
+}
+
+.container-fluid{
+    display: flex;
+    flex-direction: row;   
+}
